@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+:root {
+  /* Core */
+  --bg: #faf9f6;
+  --surface: #ffffff;
+  --surface-muted: #f1eee8;
+  --text: #1c1b1a;
+  --text-secondary: #4a4743;
+  --text-muted: #6b6862;
+  --text-disabled: #a8a49c;
+  --border: #e8e5df;
+  --border-strong: #928d83;
+
+  /* Accent */
+  --accent: #cf4720;
+  --accent-hover: #b53c19;
+  --accent-pressed: #9a3314;
+  --accent-soft: #fbe8df;
+  --accent-soft-border: #f2c7b3;
+
+  /* Semantic */
+  --danger: #b42318;
+  --success: #2f7d52;
+
+  /* Status */
+  --status-pending-bg: #fdf1d3;
+  --status-pending-text: #7a4d00;
+  --status-pending-border: #f0d48a;
+  --status-pending-dot: #d99a06;
+
+  --status-approved-bg: #e3f3ea;
+  --status-approved-text: #1f5c3b;
+  --status-approved-border: #a9d9bd;
+  --status-approved-dot: #2f7d52;
+
+  --status-rejected-bg: #fdeceb;
+  --status-rejected-text: #912018;
+  --status-rejected-border: #f3b9b4;
+  --status-rejected-dot: #b42318;
+
+  /* Leave types */
+  --leave-annual: #1f7a8c;
+  --leave-annual-soft: #dcf0f3;
+  --leave-annual-text: #16535f;
+
+  --leave-sick: #c2457a;
+  --leave-sick-soft: #fbe5ef;
+  --leave-sick-text: #8f2a57;
+
+  --leave-casual: #7c5cd6;
+  --leave-casual-soft: #ece8fb;
+  --leave-casual-text: #503aa8;
+
+  --leave-unpaid: #6b6862;
+  --leave-unpaid-soft: #efece6;
+  --leave-unpaid-text: #3f3d39;
+
+  --leave-study: #3f63c9;
+  --leave-study-soft: #e0e8fc;
+  --leave-study-text: #2c4496;
+
+  /* Radii (only the ones that differ from Tailwind defaults) */
+  --radius-control: 0.5rem;
+  --radius-card: 0.75rem;
+  --radius-drawer: 1rem;
+
+  /* Shadows */
+  --shadow-card: 0 1px 2px rgba(28, 27, 26, 0.05);
+  --shadow-popover: 0 4px 12px -2px rgba(28, 27, 26, 0.08);
+  --shadow-drawer: 0 24px 48px -12px rgba(28, 27, 26, 0.22);
+  --overlay: rgba(28, 27, 26, 0.48);
+
+  /* Focus ring */
+  --ring-accent: 0 0 0 3px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+@theme inline {
+  /* Fonts */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif:
+    var(--font-fraunces), ui-serif, Georgia, "Times New Roman", serif;
+
+  /* Colors – only the custom ones */
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-text: var(--text);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-disabled: var(--text-disabled);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-pressed: var(--accent-pressed);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-soft-border: var(--accent-soft-border);
+
+  --color-danger: var(--danger);
+  --color-success: var(--success);
+
+  --color-status-pending-bg: var(--status-pending-bg);
+  --color-status-pending-text: var(--status-pending-text);
+  --color-status-pending-border: var(--status-pending-border);
+  --color-status-pending-dot: var(--status-pending-dot);
+
+  --color-status-approved-bg: var(--status-approved-bg);
+  --color-status-approved-text: var(--status-approved-text);
+  --color-status-approved-border: var(--status-approved-border);
+  --color-status-approved-dot: var(--status-approved-dot);
+
+  --color-status-rejected-bg: var(--status-rejected-bg);
+  --color-status-rejected-text: var(--status-rejected-text);
+  --color-status-rejected-border: var(--status-rejected-border);
+  --color-status-rejected-dot: var(--status-rejected-dot);
+
+  --color-leave-annual: var(--leave-annual);
+  --color-leave-annual-soft: var(--leave-annual-soft);
+  --color-leave-annual-text: var(--leave-annual-text);
+
+  --color-leave-sick: var(--leave-sick);
+  --color-leave-sick-soft: var(--leave-sick-soft);
+  --color-leave-sick-text: var(--leave-sick-text);
+
+  --color-leave-casual: var(--leave-casual);
+  --color-leave-casual-soft: var(--leave-casual-soft);
+  --color-leave-casual-text: var(--leave-casual-text);
+
+  --color-leave-unpaid: var(--leave-unpaid);
+  --color-leave-unpaid-soft: var(--leave-unpaid-soft);
+  --color-leave-unpaid-text: var(--leave-unpaid-text);
+
+  --color-leave-study: var(--leave-study);
+  --color-leave-study-soft: var(--leave-study-soft);
+  --color-leave-study-text: var(--leave-study-text);
+
+  /* Radii */
+  --radius-control: var(--radius-control);
+  --radius-card: var(--radius-card);
+  --radius-drawer: var(--radius-drawer);
+
+  /* Shadows */
+  --shadow-card: var(--shadow-card);
+  --shadow-popover: var(--shadow-popover);
+  --shadow-drawer: var(--shadow-drawer);
+
+  /* Focus */
+  --ring-accent: var(--ring-accent);
+}

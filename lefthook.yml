@@ -1,0 +1,20 @@
+pre-commit:
+  parallel: true
+  jobs:
+    - name: Lint frontend
+      glob: "*.{ts,tsx}"
+      run: npm run lint:fix -- {staged_files}
+      root: frontend
+      stage_fixed: true
+    - name: Format frontend
+      run: npm run format
+      root: frontend
+      stage_fixed: true
+    - name: Lint backend
+      run: uv run ruff check --fix
+      root: backend
+      stage_fixed: true
+    - name: Format backend
+      run: uv run ruff format
+      root: backend
+      stage_fixed: true

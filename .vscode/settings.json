@@ -1,0 +1,30 @@
+{
+  "tailwindCSS.experimental.configFile": "frontend/app/globals.css",
+  "prettier.configPath": "frontend/.prettierrc",
+  "prettier.ignorePath": "frontend/.prettierignore",
+  "prettier.prettierPath": "frontend/node_modules/prettier",
+  "js/ts.tsdk.path": "frontend/node_modules/typescript/lib",
+  "js/ts.tsdk.promptToUseWorkspaceVersion": true,
+  "python.analysis.typeCheckingMode": "off",
+  "python.analysis.languageServerMode": "full",
+  "python.analysis.autoImportCompletions": true,
+  "python.defaultInterpreterPath": "backend/.venv/bin/python",
+  "mypy-type-checker.cwd": "${workspaceFolder}/backend",
+  "mypy-type-checker.importStrategy": "fromEnvironment",
+  "ruff.configuration": "backend/pyproject.toml",
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
+    }
+  },
+  "[typescript][typescriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  "[toml]": {
+    "editor.formatOnSave": false
+  }
+}

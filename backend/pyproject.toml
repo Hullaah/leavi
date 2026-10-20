@@ -1,0 +1,54 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "An app to request for leave and get response instantly."
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "alembic>=1.20.0",
+    "fastapi[standard]>=0.147.0",
+    "psycopg[binary]>=3.3.6",
+    "pwdlib[argon2]>=0.3.1",
+    "pydantic-settings>=2.16.0",
+    "pyjwt>=2.15.1",
+    "sqlalchemy>=2.1.5",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=2.4.0",
+    "ruff>=0.17.1",
+]
+
+[tool.fastapi]
+entrypoint = "main:app"
+
+[tool.mypy]
+strict = true
+plugins = [
+    "pydantic.mypy",
+]
+exclude = [
+    "migrations/"
+]
+
+[tool.ruff.lint]
+extend-select = [
+    "F",        # Pyflakes rules
+    "W",        # PyCodeStyle warnings
+    "E",        # PyCodeStyle errors
+    "I",        # Sort imports properly
+    "UP",       # Warn if certain things can changed due to newer Python versions
+    "C4",       # Catch incorrect use of comprehensions, dict, list, etc
+    "FA",       # Enforce from __future__ import annotations
+    "ISC",      # Good use of string concatenation
+    "ICN",      # Use common import conventions
+    "RET",      # Good return practices
+    "SIM",      # Common simplification rules
+    "TID",      # Some good import practices
+    "TC",       # Enforce importing certain types in a TYPE_CHECKING block
+    "PTH",      # Use pathlib instead of os.path
+    "TD",       # Be diligent with TODO comments
+    "NPY",      # Some numpy-specific things
+    "FURB",     # Suggest more idiomatic Python patterns
+]
